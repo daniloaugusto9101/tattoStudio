@@ -1,5 +1,36 @@
 @use 'variables'
+@import "container"
+
+
+
 
 .header
     background-color: variables.$first-color
-    box-shadow: 0px 5px 8px rgb(28, 27, 27) 
+    box-shadow: 0px 5px 8px rgb(28, 27, 27)
+    z-index: 9999
+   
+    &__container
+        @include container
+    
+    &__logo
+        width: 100px
+
+    .menu
+        display: flex
+        gap: 10px
+        flex-wrap: wrap
+    
+        &__item
+            list-style: none
+            a
+                // background-color: green
+                padding: 10px 20px
+                text-decoration: none
+                text-transform: uppercase
+                font-weight: bold
+                font-size: 14px
+                color: variables.$second-color
+                transition: .5s
+                &:hover
+                    color: variables.$third-color
+

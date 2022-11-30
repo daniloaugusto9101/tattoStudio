@@ -1,0 +1,48 @@
+@use 'variables'
+@import "container"
+@import "button"
+
+.home
+    background-color: variables.$second-color
+    width: 100%
+    // margin-top: 10px
+    height: calc(100vh - 100px)
+    
+    &__container
+        @include container
+        padding: 0 20px
+        // background-color: gray
+        align-items: stretch
+        // justify-content: stretch
+
+        .col1
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            gap: 20px
+            text-align: center
+            // background-color: red
+            &__btn
+                @include button
+                color: variables.$second-color
+            &__logo
+                width: 350px
+        .col2
+            overflow: hidden
+            // background-color: green
+            position: relative
+            &__img
+                // border: 1px solid black
+                height: 100%
+                filter: grayscale(100%)
+            &__circle
+                // position: absolute
+                // background-color: variables.$third-color
+                // height: 400px
+                // width: 400px
+                // z-index: 9999
+                // border-radius: 50%
+                // filter: saturate(50%)
+
+
